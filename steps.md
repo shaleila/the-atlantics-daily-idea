@@ -1,0 +1,21 @@
+- create local dir for the skill
+- git init!
+- github: https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
+- install npm
+- npm init
+- npm i request
+- npm install --save ask-sdk
+- these will create package.json and a bunch of other things
+- open this and follow it: https://ask-sdk-for-nodejs.readthedocs.io/en/latest/Developing-Your-First-Skill.html
+- note^: not all those intents are required! create launchrequest for sure, and then check what else is required for your specific skill (eg. does is use audioplayer?)
+- thus, create your skill in the alexa skills dev console
+- create aws lambda function, and link the two
+- create files! index. js, anything else
+- to run/test, just type "node index.js" or filename
+- be liberal with ya console.logs!!
+- check the aws lambda logs!!!
+- write some damn js
+
+- can go to "distribute" tab in the alexa dev console and set up everything to beta test, and invite people
+
+- can turn on "audioplayer" etc in the dev console, and use docs like: https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html

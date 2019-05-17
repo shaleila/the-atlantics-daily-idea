@@ -6,7 +6,15 @@ const LaunchRequestHandler = {
 	canHandle(handlerInput) {
 		return (handlerInput.requestEnvelope.request.type === 'LaunchRequest') 
 		|| (handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      	&& handlerInput.requestEnvelope.request.intent.name === 'AMAZON.ResumeIntent');
+      	&& handlerInput.requestEnvelope.request.intent.name === 'AMAZON.ResumeIntent')
+		|| (handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      	&& handlerInput.requestEnvelope.request.intent.name === 'AMAZON.NextIntent')
+		|| (handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      	&& handlerInput.requestEnvelope.request.intent.name === 'AMAZON.PreviousIntent')
+		|| (handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      	&& handlerInput.requestEnvelope.request.intent.name === 'AMAZON.RepeatIntent')
+		|| (handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      	&& handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StartOverIntent')
 	},
 	async handle(handlerInput) {
 		const speechText = 'Welcome!! hello!! you are here!';

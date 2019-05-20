@@ -9,19 +9,16 @@ const LaunchRequestHandler = {
       	&& handlerInput.requestEnvelope.request.intent.name === 'AMAZON.ResumeIntent');
 	},
 	async handle(handlerInput) {
-		const speechText = 'Welcome!! hello!! you are here!';
 		const mp3 = await getmp3()
 		return handlerInput.responseBuilder
 		.addAudioPlayerPlayDirective("REPLACE_ALL", 
 			mp3, 
-			"type whatever you want", 
+			"", 
 			0)
-		.withSimpleCard('Hello World', speechText)
+		.withSimpleCard("Welcome to The Atlantic's Daily Idea")
 		.getResponse();
 		}
 }
-
- // quit, stop, pause
 
 const PauseIntentHandler = {
  	canHandle(handlerInput) {
@@ -34,6 +31,7 @@ const PauseIntentHandler = {
       	.getResponse();
       }
 }
+
 
 
 	

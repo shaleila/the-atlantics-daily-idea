@@ -5,7 +5,7 @@ const parseString = require('xml2js').parseString;
 const parseStringPromise = util.promisify(parseString);
 
 module.exports = async function() {
-	const body = await request("https://feeds.megaphone.fm/alexaskillproducttest");
+	const body = await request("https://feeds.megaphone.fm/theatlanticsdailyidea");
 	const result = await parseStringPromise(body);
 	return result.rss.channel[0].item[0].enclosure[0].$.url;
 }
